@@ -13,4 +13,18 @@ public class ShapeNumber {
 
     }
 
+    public boolean isSquare() {
+
+        double squareRoot = Math.sqrt(number);
+        int checker = (int) squareRoot;
+        if(Math.pow(checker, 2) == Math.pow(squareRoot, 2)) { // The int is promoted to a double
+            return true;
+        } else {
+
+            return false;
+
+        }
+
+    }
+
 }

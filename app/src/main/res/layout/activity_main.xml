@@ -55,11 +55,10 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:onClick="onClick"
-        android:text="Button"
+        android:text="Click To Check!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/numberEntered"
-        app:layout_constraintVertical_bias="0.0"
-        tools:text="Click to Check!" />
+        app:layout_constraintVertical_bias="0.0" />
 </android.support.constraint.ConstraintLayout>
