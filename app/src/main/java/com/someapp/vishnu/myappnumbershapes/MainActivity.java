@@ -16,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
         EditText edit = findViewById(R.id.numberEntered);
         String numString = edit.getText().toString();
 
+        edit.setText("");
+
         if(numString.length() == 0) {
             Toast.makeText(this, "Enter a number value before pressing the button",
                     Toast.LENGTH_SHORT).show();
@@ -36,6 +38,32 @@ public class MainActivity extends AppCompatActivity {
                 return;
             }
         }
+
+        Integer numberEntered = Integer.parseInt(numString);
+
+        ShapeNumber shapeNum = new ShapeNumber(numberEntered);
+
+        Toast.makeText(this, shapeNum.toString(), Toast.LENGTH_SHORT).show();
+
+        if(shapeNum.isSquare() && shapeNum.isTriangular()) {
+            Toast.makeText(this,
+                    shapeNum.toString() + " is Triangular and Square",
+                        Toast.LENGTH_SHORT).show();
+        } else if(shapeNum.isSquare() && !shapeNum.isTriangular()) {
+            Toast.makeText(this,
+                    shapeNum.toString() + " is a Perfect Square",
+                    Toast.LENGTH_SHORT).show();
+        } else if(shapeNum.isTriangular() && !shapeNum.isSquare()) {
+            Toast.makeText(this,
+                    shapeNum.toString() + " is a Triangular number",
+                    Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this,
+                    shapeNum.toString() + " is neither Triangular nor Square",
+                    Toast.LENGTH_SHORT).show();
+        }
+
+
 
     }
 
